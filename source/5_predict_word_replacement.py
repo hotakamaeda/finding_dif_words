@@ -2,7 +2,7 @@
 import torch
 import pandas as pd
 import numpy as np
-import prediction_w_replacement as p
+import source.prediction_w_replacement as p
 
 print(torch.cuda.is_available())
 

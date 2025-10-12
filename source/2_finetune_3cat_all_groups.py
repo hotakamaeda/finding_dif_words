@@ -5,7 +5,7 @@
 import torch
 import pandas as pd
 import numpy as np
-import finetuning_3cat_model as c
+import source.finetuning_3cat_model as c
 
 print(torch.cuda.is_available())
 
