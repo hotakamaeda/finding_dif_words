@@ -1,0 +1,65 @@
+
+import torch
+import pandas as pd
+import numpy as np
+import prediction_w_replacement as p
+
+print(torch.cuda.is_available())
+
+# ----------------------------------------------------------------------------------------------------------------------
+# Prediction with replacement of high-attribution words with [UNK]
+
+# MAX
+
+p.pred_rep_cat3model(
+    input_name = 'female_3catd1',
+    out_label = "_max",
+    MAX=True,
+    LABEL = 'lab_female_3')
+
+p.pred_rep_cat3model(
+    input_name = 'female_3catd1seed',
+    out_label = "_max",
+    MAX=True,
+    LABEL = 'lab_female_3')
+
+p.pred_rep_contmodel(
+    input_name = 'female_512reg1',
+    out_label = "_max",
+    MAX=True,
+    LABEL = 'lab_female')
+
+p.pred_rep_contmodel(
+    input_name = 'female_512reg1seed',
+    out_label = "_max",
+    MAX=True,
+    LABEL = 'lab_female')
+
+# ----------------------------------------------------------------------------------------------------------------------
+# Prediction with replacement of highly-negative-attribution words with [UNK]
+# MIN
+
+p.pred_rep_cat3model(
+    input_name = 'female_3catd1',
+    out_label = "_min",
+    MAX=False,
+    LABEL = 'lab_female_3')
+
+p.pred_rep_cat3model(
+    input_name = 'female_3catd1seed',
+    out_label = "_min",
+    MAX=False,
+    LABEL = 'lab_female_3')
+
+p.pred_rep_contmodel(
+    input_name = 'female_512reg1',
+    out_label = "_min",
+    MAX=False,
+    LABEL = 'lab_female')
+
+p.pred_rep_contmodel(
+    input_name = 'female_512reg1seed',
+    out_label = "_min",
+    MAX=False,
+    LABEL = 'lab_female')
+
