@@ -1,6 +1,6 @@
 
 # ----------------------------------------------------------------------------------------------------------------------
-# This is a fine-tuning run predicting DIF stats with deberta regression
+# Fine-tune deberta to predict continuous female/male DIF
 
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
 import pandas as pd

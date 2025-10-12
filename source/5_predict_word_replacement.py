@@ -1,4 +1,7 @@
 
+# ----------------------------------------------------------------------------------------------------------------------
+# See how the female/male DIF predictions change when highly positive and negative attribution words are replaced with [UNK]
+
 import torch
 import pandas as pd
 import numpy as np
@@ -7,9 +10,7 @@ import source.prediction_w_replacement as p
 print(torch.cuda.is_available())
 
 # ----------------------------------------------------------------------------------------------------------------------
-# Prediction with replacement of high-attribution words with [UNK]
-
-# MAX
+# Prediction with replacement of highly positive-attribution words with [UNK]
 
 p.pred_rep_cat3model(
     input_name = 'female_3catd1',
@@ -37,7 +38,6 @@ p.pred_rep_contmodel(
 
 # ----------------------------------------------------------------------------------------------------------------------
 # Prediction with replacement of highly-negative-attribution words with [UNK]
-# MIN
 
 p.pred_rep_cat3model(
     input_name = 'female_3catd1',

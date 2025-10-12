@@ -1,6 +1,6 @@
 
 # ----------------------------------------------------------------------------------------------------------------------
-# This is a fine-tuning run predicting DIF stats with deberta regression
+# Explain the 3-Category DIF prediction model with SHAP
 
 import torch
 import pandas as pd
